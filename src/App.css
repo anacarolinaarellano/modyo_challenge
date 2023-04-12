@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-evenly;
+}
+
+img {
+  width: 12rem;
+  height: 14rem;
+  object-fit: cover;
+  margin: 1rem;
+  background-color: #282c34;
+}
+
+.rotate {
+  animation: rotate-keyframes 1s;
+}
+
+@keyframes rotate-keyframes {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
