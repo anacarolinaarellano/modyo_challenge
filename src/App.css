@@ -35,6 +35,11 @@
   justify-content: space-evenly;
 }
 
+.disabled{
+  pointer-events: none;
+  border: 0.7rem solid green;
+}
+
 img {
   width: 8rem;
   height: 10rem;
