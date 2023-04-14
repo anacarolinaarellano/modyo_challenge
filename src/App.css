@@ -40,9 +40,14 @@
   border: 0.7rem solid green;
 }
 
+header{
+  padding: 2rem;
+  font-family: 'Alfa Slab One', cursive;
+}
+
 img {
-  width: 8rem;
-  height: 10rem;
+  width: 12rem;
+  height: 14rem;
   object-fit: cover;
   margin: 1rem;
 }
