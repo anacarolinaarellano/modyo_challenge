@@ -18,20 +18,19 @@ function App() {
   const endpoint =
     "https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=20";
 
-  // Get images from endpoint
-  const fetchImages = async () => {
-    const response = await fetch(endpoint);
-    const data = await response.json();
-    var imagesArray = data.entries;
-    //choose first 5 random elements
-    var tempArray = randomizeArray(imagesArray);
-    tempArray = tempArray.slice(0, 5);
-    //duplicate the elements and randomize again
-    tempArray = tempArray.concat(tempArray);
-    setImages(randomizeArray(tempArray));
-  };
-
   useEffect(() => {
+    // Get images from endpoint
+    const fetchImages = async () => {
+      const response = await fetch(endpoint);
+      const data = await response.json();
+      var imagesArray = data.entries;
+      //choose first 5 random elements
+      var tempArray = randomizeArray(imagesArray);
+      tempArray = tempArray.slice(0, 5);
+      //duplicate the elements and randomize again
+      tempArray = tempArray.concat(tempArray);
+      setImages(randomizeArray(tempArray));
+    };
     fetchImages();
     document.body.className = theme;
   }, [theme]);
