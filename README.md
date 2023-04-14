@@ -8,3 +8,5 @@
 
 
 ## Web version
+
+You can also play it online in the following link [https://memory-game-ana-carolina.netlify.app/](https://memory-game-ana-carolina.netlify.app/)
