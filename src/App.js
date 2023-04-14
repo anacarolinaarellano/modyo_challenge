@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+import BootstrapSwitchButton from "bootstrap-switch-button-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import secretImg from "./secret.png";
 import ShowModal from "./components/Modal";
@@ -64,7 +64,7 @@ function App() {
 
     if (cardOne !== "") {
       if (cardOne.alt === cardTwo.alt) {
-        setPairs(pairsFound + 1)
+        setPairs(pairsFound + 1);
         setTimeout(() => {
           setShow(true); //show modal
           setTimeout(() => {
@@ -88,7 +88,7 @@ function App() {
           //reset cards
           cardOne = "";
           cardTwo = "";
-        }, 700); //wait 0.7 seconds before actions
+        }, 400); //wait 0.4 seconds before actions
       }
     }
   };
@@ -99,7 +99,7 @@ function App() {
         <h1>Memory Game</h1>
       </header>
       <div className="container">
-        <ShowModal show={show} />
+        <ShowModal show={show} theme={theme} />
         {images.map((currImg, idx) => {
           const url = currImg.fields.image.url;
           const alt = currImg.fields.image.title;
@@ -114,7 +114,12 @@ function App() {
         })}
       </div>
       <div className="switch">
-       Dark mode: <BootstrapSwitchButton onChange={toggleTheme} size="lg" onstyle="success"/>
+        Dark mode:{" "}
+        <BootstrapSwitchButton
+          onChange={toggleTheme}
+          size="lg"
+          onstyle="success"
+        />
       </div>
       <footer>By: Ana Carolina Arellano</footer>
     </div>

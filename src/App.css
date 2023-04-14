@@ -7,6 +7,11 @@
   color: white;
 }
 
+.App--light-mode {
+  background-color: #ffffff;
+  color: black;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -45,7 +50,7 @@
   border: 0.7rem solid green;
 }
 
-footer{
+footer {
   padding: 2rem;
   font-size: 26px;
 }
@@ -67,7 +72,7 @@ img:hover {
   border: 0.7rem solid blue;
 }
 
-.switch{
+.switch {
   display: block;
   margin: 1rem;
   font-size: 20px;
@@ -87,7 +92,7 @@ img:hover {
   }
 }
 /*for tablets*/
-@media only screen and (min-width: 641) and (max-width: 1000px){
+@media only screen and (min-width: 641) and (max-width: 1000px) {
   img {
     width: 10rem;
     height: 12rem;
