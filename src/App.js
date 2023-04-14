@@ -13,7 +13,8 @@ function App() {
   const [images, setImages] = useState([]); // use hook for images
   const [show, setShow] = useState(false); //hook for modal
   const [theme, setTheme] = useState("App--light-mode"); //hook for theme
-  const [pairsFound, setPairs] = useState(0); //hook for theme
+  const [pairsFound, setPairs] = useState(0); //hook for pairs
+  const [errors, setErrors] = useState(0); //hook for errors
 
   const endpoint =
     "https://fed-team.modyo.cloud/api/content/spaces/animals/types/game/entries?per_page=20";
@@ -81,6 +82,7 @@ function App() {
       } //no match
       else {
         setTimeout(() => {
+          setErrors(errors + 1);
           //hide images again
           cardOne.src = secretImg;
           cardTwo.src = secretImg;
@@ -97,6 +99,9 @@ function App() {
       <header>
         <h1>Memory Game</h1>
       </header>
+      <div className="score">
+        Hits: {pairsFound} Errors: {errors}
+      </div>
       <div className="container">
         <ShowModal show={show} theme={theme} />
         {images.map((currImg, idx) => {

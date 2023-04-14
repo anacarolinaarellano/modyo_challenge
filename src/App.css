@@ -72,6 +72,10 @@ img:hover {
   border: 0.7rem solid blue;
 }
 
+.score{
+  font-size: 24px;
+}
+
 .switch {
   display: block;
   margin: 1rem;
