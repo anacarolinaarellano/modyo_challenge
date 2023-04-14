@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.App--dark-mode {
+  background-color: #282c34;
+  color: white;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,14 +40,19 @@
   justify-content: space-evenly;
 }
 
-.disabled{
+.disabled {
   pointer-events: none;
   border: 0.7rem solid green;
 }
 
-header{
+footer{
   padding: 2rem;
-  font-family: 'Alfa Slab One', cursive;
+  font-size: 26px;
+}
+
+header {
+  padding: 2rem;
+  font-family: "Alfa Slab One", cursive;
 }
 
 img {
@@ -55,4 +65,33 @@ img {
 img:hover {
   zoom: 105%;
   border: 0.7rem solid blue;
+}
+
+.switch{
+  display: block;
+  margin: 1rem;
+  font-size: 20px;
+}
+
+/*for phones*/
+@media only screen and (max-width: 800px) {
+  img {
+    width: 8rem;
+    height: 10rem;
+    object-fit: cover;
+    margin: 1rem;
+  }
+  img:hover {
+    zoom: 102%;
+    border: 0.4rem solid blue;
+  }
+}
+/*for tablets*/
+@media only screen and (min-width: 641) and (max-width: 1000px){
+  img {
+    width: 10rem;
+    height: 12rem;
+    object-fit: cover;
+    margin: 1rem;
+  }
 }
